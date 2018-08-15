@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EnvironmentDotNet.IoT.Sensors.BME680
+namespace EnvironmentDotNet.IoT.Sensors.BME680.DataStructures
 {
     public static class GlobalDefines
     {
@@ -105,6 +105,15 @@ namespace EnvironmentDotNet.IoT.Sensors.BME680
         public const int BME680MaxOverflow = 0x40000000;
     }
 
+    public enum BME680Intf
+    {
+        // SPI interface
+        BME680_SPI_INTF,
+        
+        // I2C interface
+        BME680_I2C_INTF
+    }
+    
     public enum BME680RegisterBufferIndex
     {
         Filter = 5,
